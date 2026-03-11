@@ -1,14 +1,14 @@
 package com.example.biblioteca.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
@@ -24,4 +24,14 @@ public class Usuario {
     private String nome;
     @NotBlank
     private String email;
+
+
+    @OneToOne
+    @MapsId
+    private CarteiraBiblioteca carteiraBiblioteca;
+
+    @OneToMany(mappedBy = "usuario_id")
+    private List<Emprestimo>emprestimos =new ArrayList<>();
+
+
 }

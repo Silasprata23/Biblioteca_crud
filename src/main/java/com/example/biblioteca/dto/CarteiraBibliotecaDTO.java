@@ -13,6 +13,6 @@ import java.util.Date;
 public class CarteiraBibliotecaDTO {
 
     private long numeroCarteira;
-    private Date dataEmissao;
     private boolean isValid;
+
 }
