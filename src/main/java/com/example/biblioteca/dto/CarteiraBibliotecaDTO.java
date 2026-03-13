@@ -12,7 +12,7 @@ import java.util.Date;
 @Setter
 public class CarteiraBibliotecaDTO {
 
-    private long numeroCarteira;
+    private Long numeroCarteira;
     private boolean isValid;
 
 }

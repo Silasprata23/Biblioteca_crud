@@ -1,6 +1,7 @@
 package com.example.biblioteca.Entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -16,10 +17,10 @@ public class CarteiraBiblioteca {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long numeroCarteira;
-
+    private Long numeroCarteira;
+    @NotBlank
     private Date dataEmissao;
-
+    @NotBlank
     private boolean isValid;
 
 

@@ -17,7 +17,7 @@ public class Emprestimo {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
     @NotBlank
     private Date dataEmprestimo;
     @NotBlank

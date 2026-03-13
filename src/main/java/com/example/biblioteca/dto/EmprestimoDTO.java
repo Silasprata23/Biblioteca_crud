@@ -1,5 +1,6 @@
 package com.example.biblioteca.dto;
 
+import jakarta.validation.constraints.NotBlank;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,8 +13,10 @@ import java.util.Date;
 @Getter
 public class EmprestimoDTO {
 
-    private long id;
+    private Long id;
+    @NotBlank
     private Date dataEmprestimo;
+    @NotBlank
     private Date dataDevolucao;
 
 
