@@ -2,6 +2,7 @@ package com.example.biblioteca.Entity;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,9 +19,9 @@ public class Emprestimo {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    @NotBlank
+    @NotNull
     private Date dataEmprestimo;
-    @NotBlank
+    @NotNull
     private Date dataDevolucao;
 
 
